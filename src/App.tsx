@@ -1,4 +1,3 @@
-import React from 'react';
 import { GameProvider, useGame } from './context/GameContext';
 import { AdoptionScreen } from './components/AdoptionScreen/AdoptionScreen';
 import { PermissionScreen } from './components/PermissionScreen/PermissionScreen';

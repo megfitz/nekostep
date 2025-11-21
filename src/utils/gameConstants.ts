@@ -1,4 +1,4 @@
-import { GrowthStage, InteractionOption } from '../types';
+import type { GrowthStage, InteractionOption } from '../types';
 
 // Energy System
 export const MAX_ENERGY = 1000;

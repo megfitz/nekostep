@@ -1,8 +1,6 @@
-import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { InteractionType, InteractionOption } from '../../types';
+import type { InteractionType, InteractionOption, GrowthStage } from '../../types';
 import { getAvailableInteractions } from '../../utils/gameConstants';
-import { GrowthStage } from '../../types';
 import './Modal.css';
 
 interface ModalProps {

@@ -1,6 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { Pet } from '../../types';
+import type { Pet } from '../../types';
 import './PetDisplay.css';
 
 interface PetDisplayProps {

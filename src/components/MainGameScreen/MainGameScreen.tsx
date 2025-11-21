@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useGame } from '../../context/GameContext';
-import { InteractionType, InteractionOption } from '../../types';
+import type { InteractionType, InteractionOption } from '../../types';
 import { PetDisplay } from '../PetDisplay/PetDisplay';
 import { EnergyCounter } from '../EnergyCounter/EnergyCounter';
 import { ProgressBar } from '../ProgressBar/ProgressBar';

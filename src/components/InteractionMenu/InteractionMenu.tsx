@@ -1,6 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { InteractionType } from '../../types';
+import type { InteractionType } from '../../types';
 import './InteractionMenu.css';
 
 interface InteractionMenuProps {

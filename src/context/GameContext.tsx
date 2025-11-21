@@ -1,5 +1,5 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-import { Pet, GameState, PetType, InteractionType } from '../types';
+import { createContext, useContext, useState, useEffect, type ReactNode } from 'react';
+import type { Pet, GameState, PetType, InteractionType } from '../types';
 import { useLocalStorage } from '../hooks/useLocalStorage';
 import { useStepTracker } from '../hooks/useStepTracker';
 import { useSounds } from '../hooks/useSounds';
@@ -32,7 +32,7 @@ export function GameProvider({ children }: { children: ReactNode }) {
     hasPermission: false,
   });
 
-  const [steps, , resetSteps] = useStepTracker(gameState.steps);
+  const [steps] = useStepTracker(gameState.steps);
   const { play: playSound } = useSounds();
   const [energyAvailable, setEnergyAvailable] = useState(0);
 

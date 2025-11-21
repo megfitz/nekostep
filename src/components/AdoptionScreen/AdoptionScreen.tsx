@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useGame } from '../../context/GameContext';
-import { PetType } from '../../types';
+import type { PetType } from '../../types';
 import { PET_TYPES } from '../../utils/gameConstants';
 import './AdoptionScreen.css';
 

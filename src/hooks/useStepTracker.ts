@@ -12,7 +12,7 @@ import {
  */
 export function useStepTracker(initialSteps: number = 0) {
   const [steps, setSteps] = useState(initialSteps);
-  const intervalRef = useRef<number>();
+  const intervalRef = useRef<number | undefined>(undefined);
 
   useEffect(() => {
     // Auto-increment steps in the background
