@@ -1,0 +1,200 @@
+.pet-display {
+  background: #fff;
+  border: 3px solid #000;
+  padding: 20px;
+  text-align: center;
+}
+
+.pet-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.pet-container {
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.pet-sprite-main {
+  width: 120px;
+  height: 120px;
+  position: relative;
+  transition: all 0.3s;
+}
+
+/* Scale up pet with growth stages */
+.stage-2 .pet-sprite-main { transform: scale(1.1); }
+.stage-3 .pet-sprite-main { transform: scale(1.25); }
+.stage-4 .pet-sprite-main { transform: scale(1.4); }
+.stage-5 .pet-sprite-main { transform: scale(1.6); }
+
+.sprite-body {
+  width: 100%;
+  height: 100%;
+  border-radius: 50% 50% 45% 45%;
+  border: 3px solid #000;
+  position: relative;
+  z-index: 1;
+}
+
+/* Different colors per pet type */
+.pet-sprite-main[data-type="cat1"] .sprite-body {
+  background: linear-gradient(135deg, #ff006e 0%, #ff4d9d 100%);
+}
+
+.pet-sprite-main[data-type="cat2"] .sprite-body {
+  background: linear-gradient(135deg, #8338ec 0%, #a56eff 100%);
+}
+
+.pet-sprite-main[data-type="cat3"] .sprite-body {
+  background: linear-gradient(135deg, #fb5607 0%, #ff8042 100%);
+}
+
+/* Eyes */
+.sprite-eyes {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 25px;
+  z-index: 2;
+}
+
+.eye {
+  width: 12px;
+  height: 12px;
+  background: #000;
+  border-radius: 50%;
+  position: relative;
+}
+
+.eye::after {
+  content: '';
+  width: 4px;
+  height: 4px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+}
+
+.sprite-eyes.sleepy .eye {
+  height: 3px;
+  border-radius: 0;
+}
+
+/* Ears */
+.sprite-ears {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 0;
+}
+
+.ear {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 25px solid #000;
+  position: relative;
+}
+
+.ear::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 20px solid;
+  bottom: -23px;
+  left: -12px;
+}
+
+.pet-sprite-main[data-type="cat1"] .ear::after {
+  border-bottom-color: #ff006e;
+}
+
+.pet-sprite-main[data-type="cat2"] .ear::after {
+  border-bottom-color: #8338ec;
+}
+
+.pet-sprite-main[data-type="cat3"] .ear::after {
+  border-bottom-color: #fb5607;
+}
+
+/* Tail */
+.sprite-tail {
+  position: absolute;
+  right: -30px;
+  bottom: 20px;
+  width: 40px;
+  height: 10px;
+  background: #000;
+  border-radius: 5px;
+  transform-origin: left center;
+}
+
+/* Sparkle effect for higher stages */
+.sparkle {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  width: 20px;
+  height: 20px;
+  background: #ffbe0b;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  z-index: 3;
+}
+
+/* Zzz for low energy */
+.zzz {
+  position: absolute;
+  top: 20px;
+  right: -30px;
+  font-size: 1.5rem;
+  color: #666;
+  font-weight: bold;
+}
+
+.pet-sprite-main.tired {
+  opacity: 0.7;
+}
+
+.pet-stats {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 15px;
+  border-top: 2px solid #e0e0e0;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.stat-value {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #000;
+}

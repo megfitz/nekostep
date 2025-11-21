@@ -1,0 +1,69 @@
+.permission-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #06ffa5 0%, #00b4d8 100%);
+  padding: 20px;
+}
+
+.permission-container {
+  background: #fff;
+  border: 4px solid #000;
+  border-radius: 8px;
+  padding: 40px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.pet-icon {
+  margin-bottom: 20px;
+}
+
+.permission-container h2 {
+  font-size: 1.8rem;
+  margin: 0 0 25px 0;
+  color: #000;
+}
+
+.info-box {
+  background: #f0f0f0;
+  border: 3px solid #333;
+  padding: 20px;
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.info-text {
+  margin: 0 0 15px 0;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.info-text:last-of-type {
+  margin-bottom: 0;
+}
+
+.info-detail {
+  margin: 15px 0 0 0;
+  padding: 15px;
+  background: #fffacd;
+  border: 2px dashed #ffbe0b;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.btn-large {
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.privacy-note {
+  margin: 10px 0 0 0;
+  font-size: 0.85rem;
+  color: #666;
+}

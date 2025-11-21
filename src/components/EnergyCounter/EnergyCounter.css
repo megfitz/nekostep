@@ -1,0 +1,79 @@
+.energy-counter {
+  background: #fff;
+  border: 3px solid #000;
+  padding: 15px;
+  text-align: center;
+  position: relative;
+}
+
+.energy-label {
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.energy-display {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  transition: color 0.3s;
+}
+
+.energy-display.low {
+  color: #ff006e;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.energy-value {
+  display: inline-block;
+}
+
+.energy-max {
+  font-size: 1.2rem;
+  color: #666;
+  margin-left: 3px;
+}
+
+.energy-bar-container {
+  width: 100%;
+  height: 20px;
+  background: #e0e0e0;
+  border: 2px solid #000;
+  position: relative;
+  overflow: hidden;
+}
+
+.energy-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #06ffa5 0%, #00d4ff 100%);
+  transition: width 0.3s ease-out;
+}
+
+.energy-bar.low {
+  background: linear-gradient(90deg, #ff006e 0%, #ff4d00 100%);
+}
+
+.energy-change {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  pointer-events: none;
+}
+
+.energy-change.positive {
+  color: #06ffa5;
+  text-shadow: 1px 1px 0 #000;
+}
+
+.energy-change.negative {
+  color: #ff006e;
+  text-shadow: 1px 1px 0 #000;
+}
